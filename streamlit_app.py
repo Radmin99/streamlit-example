@@ -5,20 +5,17 @@ import pandas as pd
 import streamlit as st
 
 """
-# Welcome to Streamlit!
+# Welcome To Internet Subscribers Forecasting App 
 
-Edit `/streamlit_app.py` to customize this app to your heart's desire :heart:
+This application is designed to forecast the number of internet subscribers based on trained data set using ML. 
 
-If you have any questions, checkout our [documentation](https://docs.streamlit.io) and [community
-forums](https://discuss.streamlit.io).
 
-In the meantime, below is an example of what you can do with just a few lines of code:
 """
 
 
 with st.echo(code_location='below'):
-    total_points = st.slider("Number of points in spiral", 1, 5000, 2000)
-    num_turns = st.slider("Number of turns in spiral", 1, 100, 9)
+    n_years = st.slider("Years of Prediction:", 1, 4)
+    period = n_years * 365
 
     Point = namedtuple('Point', 'x y')
     data = []
